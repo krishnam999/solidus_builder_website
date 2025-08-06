@@ -1,0 +1,39 @@
+/* This is our custom CSS file. We'll use this for specific animations or styles not easily done with Tailwind utility classes. */
+
+/* Custom animation for the loader in the hero section */
+/* .loader-animation {
+    width: 80px;
+    height: 80px;
+    border: 8px solid #FFD700; 
+    border-top: 8px solid transparent; 
+} */
+
+/* Keyframe animation for the spinning loader */
+/* @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} */
+
+/* Custom animation for the button */
+.button-animate {
+    position: relative;
+    overflow: hidden;
+}
+
+.button-animate:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1); /* White semi-transparent background */
+    transition: all 0.5s ease;
+    border-radius: 50%; /* Make it a circle */
+    z-index: -1;
+    transform: translate(-50%, -50%) scale(0); /* Start as a small dot in the center */
+}
+
+.button-animate:hover:before {
+    transform: translate(-50%, -50%) scale(1); /* Scale up to fill the button on hover */
+}
