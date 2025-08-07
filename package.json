@@ -1,0 +1,15 @@
+{
+  "name": "construction-website",
+  "version": "1.0.0",
+  "description": "A responsive website for a construction company.",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "nodemailer": "^6.9.8",
+    "cors": "^2.8.5"
+  }
+}
