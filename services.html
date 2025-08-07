@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Solidus Builders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS enhancements */
+        body {
+            scroll-behavior: smooth;
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gold-hover {
+            position: relative;
+        }
+        
+        .gold-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #FFD700;
+            transition: width 0.3s ease;
+        }
+        
+        .gold-hover:hover::after {
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .service-content {
+                flex-direction: column;
+            }
+            
+            .service-img {
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased">
+
+    <header class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-[#FFD700] hover:text-yellow-500 transition-colors duration-300 flex items-center">
+                <i class="fas fa-home mr-2"></i> Solidus Builders
+            </a>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="index.html" class="gold-hover hover:text-[#FFD700] transition-colors duration-300 py-2">Home</a></li>
+                <li><a href="about.html" class="gold-hover hover:text-[#FFD700] transition-colors duration-300 py-2">About</a></li>
+                <li><a href="services.html" class="gold-hover text-[#FFD700] font-semibold transition-colors duration-300 py-2">Services</a></li>
+                <li><a href="portfolio.html" class="gold-hover hover:text-[#FFD700] transition-colors duration-300 py-2">Portfolio</a></li>
+                <li><a href="contact.html" class="gold-hover hover:text-[#FFD700] transition-colors duration-300 py-2">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <ul class="flex flex-col space-y-3 px-4 py-3">
+                <li><a href="index.html" class="block gold-hover hover:text-[#FFD700] transition-colors duration-300 py-2">Home</a></li>
+                <li><a href="about.html" class="block gold-hover hover:text-[#FFD700] transition-colors duration-300 py-2">About</a></li>
+                <li><a href="services.html" class="block text-[#FFD700] font-semibold transition-colors duration-300 py-2">Services</a></li>
+                <li><a href="portfolio.html" class="block gold-hover hover:text-[#FFD700] transition-colors duration-300 py-2">Portfolio</a></li>
+                <li><a href="contact.html" class="block gold-hover hover:text-[#FFD700] transition-colors duration-300 py-2">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-12 px-4">
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our <span class="text-[#FFD700]">Services</span></h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Building your vision with precision and excellence</p>
+        </section>
+
+        <div class="grid gap-12 max-w-6xl mx-auto">
+            <!-- Service 1 -->
+            <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                <div class="service-content flex flex-col md:flex-row">
+                    <div class="service-img md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="House Building" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 md:w-1/2">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-[#FFD700] p-3 rounded-full mr-4">
+                                <i class="fas fa-home text-white text-xl"></i>
+                            </div>
+                            <h2 class="text-3xl font-bold text-gray-800">House Building</h2>
+                        </div>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            This service encompasses the entire process of constructing a new residential home from the ground up. It includes everything from initial architectural design and planning to site preparation, foundation work, framing, roofing, and the installation of all utilities and finishes.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#FFD700] mt-1 mr-2"></i>
+                                <span>Custom architectural design</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#FFD700] mt-1 mr-2"></i>
+                                <span>Quality material selection</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#FFD700] mt-1 mr-2"></i>
+                                <span>Project management from start to finish</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-block bg-[#FFD700] hover:bg-yellow-600 text-gray-900 font-semibold px-6 py-3 rounded-lg transition-colors duration-300">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                <div class="service-content flex flex-col md:flex-row-reverse">
+                    <div class="service-img md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Apartment Construction" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 md:w-1/2">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-[#FFD700] p-3 rounded-full mr-4">
+                                <i class="fas fa-building text-white text-xl"></i>
+                            </div>
+                            <h2 class="text-3xl font-bold text-gray-800">Apartment & Multi-Family Construction</h2>
+                        </div>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Specializing in the development of multi-unit residential buildings, this service covers the design, engineering, and construction of apartment complexes. We manage the entire project, focusing on efficient space utilization, safety compliance, and creating appealing, functional living spaces.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#FFD700] mt-1 mr-2"></i>
+                                <span>High-density residential solutions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#FFD700] mt-1 mr-2"></i>
+                                <span>Community space planning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#FFD700] mt-1 mr-2"></i>
+                                <span>Regulatory compliance expertise</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-block bg-[#FFD700] hover:bg-yellow-600 text-gray-900 font-semibold px-6 py-3 rounded-lg transition-colors duration-300">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                <div class="service-content flex flex-col md:flex-row">
+                    <div class="service-img md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1600566752229-250ed79470f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Renovations" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 md:w-1/2">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-[#FFD700] p-3 rounded-full mr-4">
+                                <i class="fas fa-tools text-white text-xl"></i>
+                            </div>
+                            <h2 class="text-3xl font-bold text-gray-800">Renovations</h2>
+                        </div>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Whether it's a single room or an entire house, our renovation services breathe new life into existing properties. We handle everything from minor cosmetic updates like painting and flooring to major structural changes, such as reconfiguring layouts or adding new extensions.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#FFD700] mt-1 mr-2"></i>
+                                <span>Custom remodeling solutions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#FFD700] mt-1 mr-2"></i>
+                                <span>Historic preservation expertise</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[#FFD700] mt-1 mr-2"></i>
+                                <span>Energy efficiency upgrades</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-block bg-[#FFD700] hover:bg-yellow-600 text-gray-900 font-semibold px-6 py-3 rounded-lg transition-colors duration-300">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold text-[#FFD700] mb-4">Solidus Builders</h3>
+                    <p class="mb-4">Building dreams into reality with quality craftsmanship and innovative design since 2005.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-[#FFD700] transition-colors duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#FFD700] transition-colors duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#FFD700] transition-colors duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#FFD700] transition-colors duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-[#FFD700] transition-colors duration-300">Home</a></li>
+                        <li><a href="about.html" class="hover:text-[#FFD700] transition-colors duration-300">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-[#FFD700] transition-colors duration-300">Services</a></li>
+                        <li><a href="portfolio.html" class="hover:text-[#FFD700] transition-colors duration-300">Portfolio</a></li>
+                        <li><a href="contact.html" class="hover:text-[#FFD700] transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-[#FFD700] mt-1 mr-3"></i>
+                            <span>123 Construction St, Builders City</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-[#FFD700] mt-1 mr-3"></i>
+                            <span>(555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-[#FFD700] mt-1 mr-3"></i>
+                            <span>info@solidusbuilders.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p>&copy; 2025 Solidus Builders. All rights reserved.</p>
+                <div class="mt-4">
+                    <a href="#" class="text-gray-400 hover:text-[#FFD700] mx-2 transition-colors duration-300">Privacy Policy</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="#" class="text-gray-400 hover:text-[#FFD700] mx-2 transition-colors duration-300">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
